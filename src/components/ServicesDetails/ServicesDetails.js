@@ -9,7 +9,7 @@ const ServicesDetails = ({service}) => {
                       <img src={img} className="card-img-top img-fluid p-4" alt="..."/>
                       <div className="card-body bg-dark text-light">
                         <h5 className="card-title">{name}</h5>
-                        <p>Price:{price}</p>
+                        <p>Price:${price}</p>
                         <p className="card-text">{description}</p>
                       </div>
                       <div className="card-footer">

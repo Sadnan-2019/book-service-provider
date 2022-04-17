@@ -2,26 +2,48 @@ import { Button } from 'bootstrap';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
 
 const Login = () => {
+
+          const [
+                    signInWithEmailAndPassword,
+                    user,
+                    loading,
+                    error,
+                  ] = useSignInWithEmailAndPassword(auth);
           const navigate = useNavigate()
 
           const navigateRegister=(event)=>{
                     navigate("/register")
 
           }
+
+          const handleLogin=(event)=>{
+                    event.preventDefault();
+                    const email = event.target.email.value;
+                    const password = event.target.password.value;
+                    signInWithEmailAndPassword(email,password)
+                    navigate("/")
+
+
+                    // console.log("login")
+          }
           return (
                     <div className='w-50 mx-auto'>
 
  <h3 className='text-center'>Please Login</h3>
- <Form  >
+ <Form onSubmit={handleLogin} >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
             
             type="email"
             placeholder="Enter email"
-            required
+        
+            name='email'
           />
           
         </Form.Group>
@@ -32,7 +54,8 @@ const Login = () => {
            
             type="password"
             placeholder="Password"
-            required
+         
+            name='password'
           />
         </Form.Group>
         
