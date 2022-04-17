@@ -2,17 +2,14 @@
 // import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword,useSignInWithGoogle } from "react-firebase-hooks/auth";
-// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-
 const Login = () => {
-//   const [users, setGoogle] = useState({});
-  
-  const [signInWithGoogle, googleUser, loading, error] = useSignInWithGoogle(auth);
-
-
+  const [signInWithGoogle, googleUser, loading, error] =
+    useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, signInuser, signInloading, signInerror] =
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -27,14 +24,11 @@ const Login = () => {
     const password = event.target.password.value;
     signInWithEmailAndPassword(email, password);
     navigate("/");
-
     // console.log("login")
   };
 
-  if(googleUser)
-  {
-    navigate('/')
-
+  if (googleUser) {
+    navigate("/");
   }
 
   return (
@@ -54,12 +48,14 @@ const Login = () => {
             name="password"
           />
         </Form.Group>
-
         <button className="btn btn-primary" type="submit">
           Login
         </button>
       </Form>
-      <button className="btn btn-primary my-2" onClick={()=>{signInWithGoogle()}}>
+      <button
+        className="btn btn-primary my-2"
+        onClick={() => signInWithGoogle()}
+      >
         SignWithGoogle
       </button>
 
