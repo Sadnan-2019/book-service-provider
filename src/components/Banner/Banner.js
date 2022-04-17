@@ -57,6 +57,9 @@ const Banner = () => {
               className="d-block w-100 img-fluid vh-80   img-thumbnail "
               alt="..." style={{height:"600px"}}
             />
+             <div className="text">
+              <h1 className='text-light'>Book is more than one </h1>
+            </div>
           </div>
           <div className="carousel-item">
             <img

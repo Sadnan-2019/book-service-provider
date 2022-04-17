@@ -6,7 +6,7 @@ const Header = () => {
                     <>
                           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="#home"><img width={45} src='https://i.pinimg.com/originals/e4/c9/35/e4c93501db6e7a6913251fc7d52dea5b.png ' alt=""/></Navbar.Brand>
+  <Navbar.Brand href="#home"><h5>My Book House</h5></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
