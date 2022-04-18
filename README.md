@@ -1,5 +1,25 @@
 # Getting Started with Create React App
 
+# My Project Repo link:https://github.com/programming-hero-web-course-4/independent-service-provider-Sadnan-2019
+
+## Project Requirment
+* Use Firebase 
+
+* Use React Bootstrap
+* Use React Router
+* Showing Services
+* Use React Protected Router
+* Use React Firebase Hooks
+* Use Slider
+* Use React Toast
+* Use Reset Password hook
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

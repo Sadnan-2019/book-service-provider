@@ -11,34 +11,34 @@
             "price": 45,
             "img": "https://img.freepik.com/free-vector/private-investigator-detective-who-collects-information-with-equipment-illustration_2175-4171.jpg?w=740",
             "name": "Detective and Mystery Book",
-            "description": "Detective and Mystery"
+            "description": "A detective is an investigator, usually a member of a law enforcement agency. They often collect information to solve crimes by talking to witnesses and informants, collecting physical evidence,"
           },
           {
             "id": "625c578c422c72e9c22a4e8a",
             "price": 33,
             "img": "https://media.istockphoto.com/photos/alchemy-picture-id157281215?b=1&k=20&m=157281215&s=170667a&w=0&h=AZBpNZ4goRwkDBpHYF0aTVp-i4BFUcGCMvBdtkf4kmU=",
             "name": "Horror Book",
-            "description": "female"
+            "description": "Horror is a film genre that seeks to elicit fear or disgust in its audience for entertainment purposes. Horror films often explore dark subject matter and may deal with transgressive topics or themes."
           },
           {
             "id": "625c578c44468f673ec161e8",
             "price": 50,
             "img": "https://www.telegraph.co.uk/multimedia/archive/01419/pbooks1_1419956c.jpg",
             "name": "Comic Book",
-            "description": "female"
+            "description": "Comics is a narrative medium used to express ideas with images, often combined with text or other visual information."
           },
           {
             "id": "625c578c73988aa51ccac066",
             "price": 60,
             "img": "https://img.freepik.com/free-vector/extreme-sports-adventure-silhouettes-set_1284-45705.jpg?t=st=1650221512~exp=1650222112~hmac=07ed8f9215718c23fbec9f104bc7fd7e2ed73ac2dcc811d8f4f36a89b5673275&w=740",
             "name": "Action and Adventure",
-            "description": "male"
+            "description": "The narrative structure of an Action story follows an ordered cause and effect trajectory. Contemporary action stories, most often, follow the Hero's Journey. And, in common with almost all stories in the external genres,"
           },
           {
             "id": "625c578c73988aa51ccac069",
             "price": 70,
             "img": "https://images.unsplash.com/photo-1582023144522-76f4da32197f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=886&q=80",
             "name": "Literary Fiction",
-            "description": "male"
+            "description": "Literary fiction is a category of novels that emphasize style, character, and theme over plot."
           }
         ]
