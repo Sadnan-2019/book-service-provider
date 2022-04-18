@@ -5,6 +5,7 @@ import About from './components/About/About';
 import Banner from './components/Banner/Banner';
 import Blogs from './components/Blogs/Blogs';
 import Checkout from './components/Checkout/Checkout';
+import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -31,6 +32,7 @@ function App() {
           <Checkout/>
          </RequiureAuth>}></Route>
          <Route path='/about' element={<About/>}></Route>
+         <Route path='*' element={<Error/>}></Route>
        </Routes>
        
        <Footer></Footer>
