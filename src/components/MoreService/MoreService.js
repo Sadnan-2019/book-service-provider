@@ -17,7 +17,7 @@ const MoreService = () => {
                     <div>
                           
 
-                         <div className='App'>
+                         <div className='App my-5'>
                                    <h4>If you are agree to checkout</h4>
                        <Link to="/checkout">
 

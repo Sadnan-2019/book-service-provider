@@ -47,7 +47,7 @@ const Banner = () => {
               style={{height:"600px"}}
             />
             <div className="text">
-              <h1 className='text-light'>Book is more than </h1>
+              {/* <h1 className='text-light'>Book is more than </h1> */}
             </div>
          
           </div>
@@ -58,7 +58,7 @@ const Banner = () => {
               alt="..." style={{height:"600px"}}
             />
              <div className="text">
-              <h1 className='text-light'>Book is more than one </h1>
+              {/* <h1 className='text-light'>Book is more than one </h1> */}
             </div>
           </div>
           <div className="carousel-item">
