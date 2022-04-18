@@ -1,8 +1,16 @@
 import { Button } from 'bootstrap';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesDetails = ({service}) => {
-          const {name,img,description,price} = service
+          const {id,name,img,description,price} = service;
+          const navigate= useNavigate()
+
+          const handleServiceDetails=(id)=>{
+            navigate(`/more-service/${id}`)
+
+
+          }
           return (
                     <div className="col-sm-12 col-md-6 col-lg-4 g-4">
                     <div className="card h-100   text-light">
@@ -14,7 +22,7 @@ const ServicesDetails = ({service}) => {
                       </div>
                       <div className="card-footer">
                         {/* <small className="text-muted">Last updated 3 mins ago</small> */}
-                        <button className='btn btn-primary'>Service Details</button>
+                        <button className='btn btn-primary' onClick={()=>handleServiceDetails(id)}>Service Details</button>
                       </div>
                     </div>
                   </div> 

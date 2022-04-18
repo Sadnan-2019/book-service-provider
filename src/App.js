@@ -3,10 +3,12 @@ import { Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import Banner from './components/Banner/Banner';
 import Blogs from './components/Blogs/Blogs';
+import Checkout from './components/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import MoreService from './components/MoreService/MoreService';
 import Register from './components/Register/Register';
 // import Services from './components/Services/Services';
 
@@ -21,6 +23,8 @@ function App() {
          <Route path='/blog' element={<Blogs/>}></Route>
          <Route path='/register' element={<Register/>}></Route>
          <Route path='/login' element={<Login/>}></Route>
+         <Route path='/more-service/:serviceID' element={<MoreService/>}></Route>
+         <Route path='/checkout' element={<Checkout/>}></Route>
        </Routes>
        
        <Footer></Footer>
