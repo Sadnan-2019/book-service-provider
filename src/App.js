@@ -32,7 +32,7 @@ function App() {
           <Checkout/>
          </RequiureAuth>}></Route>
          <Route path='/about' element={<About/>}></Route>
-         <Route path='*' element={<Error/>}></Route>
+         <Route path ='*' element={<Error/>}></Route>
        </Routes>
        
        <Footer></Footer>
