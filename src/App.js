@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import { Route, Router, Routes } from 'react-router-dom';
 import './App.css';
+import About from './components/About/About';
 import Banner from './components/Banner/Banner';
 import Blogs from './components/Blogs/Blogs';
 import Checkout from './components/Checkout/Checkout';
@@ -29,6 +30,7 @@ function App() {
          <Route path='/checkout' element={<RequiureAuth>
           <Checkout/>
          </RequiureAuth>}></Route>
+         <Route path='/about' element={<About/>}></Route>
        </Routes>
        
        <Footer></Footer>

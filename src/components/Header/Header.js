@@ -34,7 +34,7 @@ const Header = () => {
               <Nav.Link href="#pricing">Pricing</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="">
+              <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
               <div className="me-2 d-flex align-items-center"><span className="text-light">{user? user?.email : ""}</span></div>
