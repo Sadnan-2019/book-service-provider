@@ -2,7 +2,7 @@
 
 # My Project Repo link:https://github.com/programming-hero-web-course-4/independent-service-provider-Sadnan-2019
 
-# live link :https://books-service-provider.web.app/about
+# live link :https://books-service-provider.web.app/
 
 ## Project Requirment
 * Use Firebase 
