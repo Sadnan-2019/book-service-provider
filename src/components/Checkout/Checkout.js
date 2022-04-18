@@ -2,8 +2,8 @@ import React from 'react';
 
 const Checkout = () => {
           return (
-                    <div>
-                          <h2>Confrtualtion for your checkout</h2>    
+                    <div className='App'>
+                          <h2>Congretualtion for your checkout</h2>    
                     </div>
           );
 };

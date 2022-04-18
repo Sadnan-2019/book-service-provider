@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import MoreService from './components/MoreService/MoreService';
 import Register from './components/Register/Register';
+import RequiureAuth from './components/RequiureAuth/RequiureAuth';
 // import Services from './components/Services/Services';
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
          <Route path='/register' element={<Register/>}></Route>
          <Route path='/login' element={<Login/>}></Route>
          <Route path='/more-service/:serviceID' element={<MoreService/>}></Route>
-         <Route path='/checkout' element={<Checkout/>}></Route>
+         
+         <Route path='/checkout' element={<RequiureAuth>
+          <Checkout/>
+         </RequiureAuth>}></Route>
        </Routes>
        
        <Footer></Footer>
