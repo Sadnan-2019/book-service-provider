@@ -2,13 +2,23 @@
 // import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import './Login..css'
+
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
+
 const Login = () => {
-  const location = useLocation()
+  const location = useLocation();
+
+  const [sendPasswordResetEmail, sending, errorReset] =
+    useSendPasswordResetEmail(auth);
 
   let from = location.state?.from?.pathname || "/";
   const [signInWithGoogle, googleUser, loading, error] =
@@ -24,17 +34,35 @@ const Login = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
+    // console.log(email)
     const password = event.target.password.value;
     signInWithEmailAndPassword(email, password);
     navigate("/");
     // console.log("login")
   };
-  if(signInuser){
 
-     
-      navigate(from, { replace: true });
-   
-  
+  const [currentEmail,setCurrentEmail]=useState("")
+  const handleEmailBlur=(event)=>{
+    const email =event.target.value;
+    setCurrentEmail(email)
+
+  }
+ 
+  const navigateResetPassword = async () => {
+    // await sendPasswordResetEmail(email);
+    // alert("Sent email");
+
+    if (currentEmail) {
+      await sendPasswordResetEmail(currentEmail);
+      toast("Sent email");
+      console.log(currentEmail)
+    } else {
+      toast("Please Enter Your Email ");
+    }
+  };
+
+  if (signInuser) {
+    navigate(from, { replace: true });
   }
 
   if (googleUser) {
@@ -47,7 +75,7 @@ const Login = () => {
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" name="email" />
+          <Form.Control type="email" placeholder="Enter email" name="email" onBlur={handleEmailBlur} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -70,7 +98,7 @@ const Login = () => {
       </button>
 
       <p className="text-center bg-dark text-light mt-2 rounded">
-        New to our book houee?{" "}
+        New to our book houese?{" "}
         <Link
           to="/register"
           onClick={navigateRegister}
@@ -79,6 +107,12 @@ const Login = () => {
           Please Register
         </Link>
       </p>
+      <p className="text-center bg-dark text-light mt-2 rounded"  >
+        <span className="reset" onClick={navigateResetPassword}>Forget Password</span>
+       
+      </p>
+
+      <ToastContainer />
     </div>
   );
 };
