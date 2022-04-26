@@ -2,7 +2,7 @@
 // import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import './Login..css'
+import "./Login..css";
 
 import {
   useSendPasswordResetEmail,
@@ -41,13 +41,12 @@ const Login = () => {
     // console.log("login")
   };
 
-  const [currentEmail,setCurrentEmail]=useState("")
-  const handleEmailBlur=(event)=>{
-    const email =event.target.value;
-    setCurrentEmail(email)
+  const [currentEmail, setCurrentEmail] = useState("");
+  const handleEmailBlur = (event) => {
+    const email = event.target.value;
+    setCurrentEmail(email);
+  };
 
-  }
- 
   const navigateResetPassword = async () => {
     // await sendPasswordResetEmail(email);
     // alert("Sent email");
@@ -55,7 +54,7 @@ const Login = () => {
     if (currentEmail) {
       await sendPasswordResetEmail(currentEmail);
       toast("Sent email");
-      console.log(currentEmail)
+      console.log(currentEmail);
     } else {
       toast("Please Enter Your Email ");
     }
@@ -75,7 +74,14 @@ const Login = () => {
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" name="email" onBlur={handleEmailBlur} />
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            
+            onBlur={handleEmailBlur}
+            required
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -84,6 +90,7 @@ const Login = () => {
             type="password"
             placeholder="Password"
             name="password"
+            required
           />
         </Form.Group>
         <button className="btn btn-primary" type="submit">
@@ -107,9 +114,10 @@ const Login = () => {
           Please Register
         </Link>
       </p>
-      <p className="text-center bg-dark text-light mt-2 rounded"  >
-        <span className="reset" onClick={navigateResetPassword}>Forget Password</span>
-       
+      <p className="text-center bg-dark text-light mt-2 rounded">
+        <span className="reset" onClick={navigateResetPassword}>
+          Forget Password
+        </span>
       </p>
 
       <ToastContainer />
