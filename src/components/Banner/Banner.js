@@ -36,13 +36,13 @@ const Banner = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-          {/* <div class="carousel-caption  mt-n5  ">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div> */}
+          <div class="carousel-caption  mt-5   ">
+        {/* <h2>First slide label</h2>
+        <h3>Some representative placeholder content for the first slide.</h3> */}
+      </div>
             <img
               src="https://images.unsplash.com/photo-1569511166187-97eb6e387e19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=910&q=80"
-              className="d-block w-100 vh-80   img-thumbnail   img-fluid  "
+              className="d-block w-100 vh-80   img-thumbnail   img-fluid   "
               alt="..."
               style={{height:"600px"}}
             />
